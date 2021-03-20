@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST["password"]; 
     
      
-    $sql = "Select * from users where email='$email' AND password='$password'";
+    $sql = "Select * from users where email='$email' AND password='$password' AND status=1" ;
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
     if ($num == 1){
