@@ -14,9 +14,9 @@ $sec_fsc = $fsc *30 /1100; //for 30%
 
 $sec_test = $test *40 /100; //for 40%
 
-// print_r($sec_test);
 
 $agregate = $sec_matric + $sec_fsc + $sec_test;
 
-// $myJSON = json_encode($myObj);
+print_r($agregate);
+//return json_encode($agregate);
 ?>
