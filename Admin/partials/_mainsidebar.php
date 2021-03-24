@@ -3,13 +3,13 @@
                             <ul class="widget widget-menu unstyled">
                                 <li class="active"><a href="welcome.php"><i class="menu-icon icon-dashboard"></i>Dashboard
                                 </a></li>
-                                <li><a href="Add_uni_course.php"><i class="menu-icon icon-bullhorn"></i>Add uni and course  </a>
+                                <li><a href="Add_uni_course.php"><i class="menu-icon icon-inbox"></i>Add univerity Description  </a>
                                 </li>
                                 <li>
                                 
                                 
                                 
-                                <a href="User.php"><i class="menu-icon icon-inbox"></i> Manage User
+                                <a href="User.php"><i class="menu-icon icon-bullhorn "></i> Manage User
                                 <b class="label green pull-right">
                                     <?php
                                     $servername = "localhost";
@@ -31,7 +31,7 @@
                                         // die(print_r('<pre>'.$run_query.'</pre>'));
                                       $count_item = mysqli_fetch_assoc($run_query);
                                       $numrows=$count_item['total'];
-                                      echo $numrows.":New";
+                                      echo $numrows.":pending";
                                    
                                     }
                                     totalvarieties();
@@ -42,13 +42,9 @@
                                     
                                     
                                     </b> </a></li>
-                                <li><a href="Add_uni_detail.php"><i class="menu-icon icon-tasks"></i>Add Uni Detail </a></li>
+                                <li><a href="Add_uni.php"><i class="menu-icon icon-tasks"></i>Add University </a></li>
                             </ul>
                             <!--/.widget-nav-->
-                            
-                            
-                         
-                         
                         </div>
                         <!--/.sidebar-->
                     </div>

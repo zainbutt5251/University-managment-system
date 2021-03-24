@@ -2,7 +2,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html">Edmin </a>
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><img src="images/logo.png"/> </a>
                     <div class="nav-collapse collapse navbar-inverse-collapse">
                         
                         

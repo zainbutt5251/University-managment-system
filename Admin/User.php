@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Edmin</title>
-	<link type="text/css" href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link type="text/css" href="./bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link type="text/css" href="./css/theme.css" rel="stylesheet">
-	<link type="text/css" href="./images/icons/css/font-awesome.css" rel="stylesheet">
-	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
-</head>
+<?php
+include "partials/_mainnav.php";
+
+?>
 <body>
 
 <?php include "partials/_navbar.php";?>
@@ -26,7 +18,7 @@
 					
 						<div class="module">
 							<div class="module-head">
-								<h3>DataTables</h3>
+								<h3>MAnage User</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
@@ -36,7 +28,7 @@
 											<th>Last name</th>
 											<th>Email</th>
 											<th>password</th>
-											<th>staus</th>
+											<th>User  staus</th>
 											<th>action</th>
 										</tr>
 									</thead>
@@ -99,7 +91,7 @@
 									</tbody>
 									<tfoot>
 										<tr>
-<th>First name</th>
+											<th>First name</th>
 											<th>Last name</th>
 											<th>Email</th>
 											<th>password</th>
@@ -118,15 +110,6 @@
 			</div>
 		</div><!--/.container-->
 	</div><!--/.wrapper-->
-
-	<div class="footer">
-		<div class="container">
-			 
-
-			<b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
-		</div>
-	</div>
-
 	<script src="./scripts/jquery-1.9.1.min.js"></script>
 	<script src="./scripts/jquery-ui-1.10.1.custom.min.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
@@ -140,4 +123,7 @@
 			$('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
 		} );
 	</script>
-</body>
+	<?php
+   include "partials/_mainfooter.php";
+     
+     ?>

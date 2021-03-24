@@ -1,29 +1,54 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/loginsystem">iSecure</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/loginsystem/welcome.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/login.php">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/signup.php">Signup</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
-      </li>
-       
-      
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+    <!--================Header Menu Area =================-->
+		<header class="header_area">
+           	<div class="top_menu row m0">
+           		<div class="container">
+					<div class="float-left">
+						<ul class="list header_social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+							<li><a href="#"><i class="fa fa-behance"></i></a></li>
+						</ul>
+					</div>
+					<div class="float-right">
+						<a class="dn_btn">12345678</a>
+						<a class="dn_btn" >admin@sopprta.com</a>
+					</div>
+           		</div>	
+           	</div>	
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-sm navbar-light">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.php"><img src="User/img/logo.png" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="fa fa-bar"></span>
+							<span class="fa fa-bar"></span>
+							<span class="fa fa-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<?php if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+								?>
+								
+								<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+								<?php	
+								} else{
+								?>
+								<li class="nav-item"><a class="nav-link" href="logout.php">logout</a></li>
+								<?php
+								
+								}
+								?>
+								
+							<li class="nav-item"><a class="nav-link" href="signup.php">Register</a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+ 

@@ -59,8 +59,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <div class="container my-4">
-       <h1 class="text-center">WELCOME TO  UNIVERSITY ADMIN PANNEL</h1>
-       <div class="card p-3">
+       <h1 class="text-center"><img src="images/logo.png" height="80px"> UNIVERSITY ADMIN PANNEL</h1>
+       <div class="card p-5 shadow" >
      <form action="login.php" method="post">
         <div class="form-group">
             <label for="username">Username</label>
@@ -75,6 +75,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
         <button type="submit" class="btn btn-primary">Login</button>
      </form>
+     <p style="text-align:right">
+     <a href="../index.php">GO To Website</a>
+     </p>
+         
     </div>
     </div>
 

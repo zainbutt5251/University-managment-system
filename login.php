@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['email'] = $email;
-        header("location: welcome.php");
+        header("location: search_list.php");
 
     } 
     else{
@@ -59,8 +59,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <div class="container my-4">
-     <h1 class="text-center">WELCOME TO OUR UNIVERSITY</h1>
-	 <div class="card p-3">
+     <h1 class="text-center"><img src="User/img/logo.png" alt="" height="90PX"> USER LOGIN</h1>
+     <hr>
+	 <div class="card  shadow p-3">
 
 	 
      <form action="login.php" method="post">
@@ -77,6 +78,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
         <button type="submit" class="btn btn-primary">Login</button>
      </form>
+     <div class="row">
+         <div class="col-md-12 text-right">
+             <a href="index.php">Already login </a>
+         </div>
+     </div>
 	 </div>
     </div>
 

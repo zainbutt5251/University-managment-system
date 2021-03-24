@@ -19,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $result = mysqli_query($conn, $sql);
         if ($result){
             $showAlert = true;
+            header("location: index.php");
         }
     }
     else{
@@ -62,8 +63,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <div class="container my-4">
-     <h1 class="text-center">NAME OF THE UNIVERSITY</h1>
-     <div class="card p-3">
+    <h1 class="text-center"><img src="User/img/logo.png" alt="" height="90PX"> User Registration</h1>
+     <hr>
+     <div class="card shadow p-3">
      <form action="signup.php" method="post">
         <div class="form-group">
             <label for="username">First Name</label>
@@ -104,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      </form>
      <div class="row">
          <div class="col-md-12 text-right">
-             <a href="login.php">Already Login</a>
+             <a href="login.php">Already Register ?</a>
          </div>
      </div>
     </div>

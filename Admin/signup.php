@@ -57,8 +57,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <div class="container my-4">
-     <h1 class="text-center">WELCOME TO  UNIVERSITY ADMIN PANNEL</h1>
-      <div class="card p-3">
+    <h1 class="text-center"><img src="images/logo.png" height="80px"> UNIVERSITY ADMIN PANNEL</h1>
+      <div class="card p-3 shadow">
      <form action="signup.php" method="post">
         <div class="form-group">
             <label for="username">Username</label>
