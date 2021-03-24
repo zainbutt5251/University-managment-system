@@ -58,12 +58,25 @@ include "partials/_mainnav.php";
 												<input data-title="A tooltip for the input" name="uni_adress" type="text" value="<?php echo $row['uni_adress']?>" data-original-title="" class="span8 tip" required>
 											</div>
 										</div>
-                                       
-                                       
-                                    
-                                      
-                                      
 									
+										<div class="control-group">
+											<label class="control-label" for="basicinput"> Marks for Matric</label>
+											<div class="controls">
+												<input data-title="A tooltip for the input" name="r_marks_matric" type="text" value="<?php echo $row['r_marks_matric']?>" data-original-title="" class="span8 tip" required>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Marks for Intermediate</label>
+											<div class="controls">
+												<input data-title="A tooltip for the input" name="r_marks_intermediate" type="text" value="<?php echo $row['r_marks_intermediate']?>" data-original-title="" class="span8 tip" required>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Marks for Entry Test</label>
+											<div class="controls">
+												<input data-title="A tooltip for the input" name="r_marks_entry" type="text" value="<?php echo $row['r_marks_entry']?>" data-original-title="" class="span8 tip" required>
+											</div>
+										</div>
 										<div class="control-group">
 											<div class="controls">
 												<button type="submit" name="Edit_uni" value="Edit_uni" class="btn">Edit University</button>

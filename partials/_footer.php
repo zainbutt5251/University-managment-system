@@ -110,7 +110,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="User/js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="User/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-	
+<script>
+        $(document).ready(function(){
+  // save comment to database
+  $(document).on('click', '#search_list', function(){
+    var r_marks_matric = $('#r_marks_matric').val();
+    var r_marks_intermediate = $('#r_marks_intermediate').val();
+    var r_marks_entry = $('#r_marks_entry').val();
+    $.ajax({
+      url: 'messages.php',
+      type: 'POST',
+      data: {
+        'r_marks_matric':r_marks_matric,
+        'r_marks_intermediate': r_marks_intermediate,
+        'r_marks_entry': r_marks_entry,
+      },
+      success: function(response){
+       console.log(response.data);
+      
+      }
+    });
+  });
+});
+        </script>
 	
 	
 		<script type="text/javascript" src="User/js/datatables.min.js"></script>

@@ -89,9 +89,12 @@ if(isset($_POST['Edit_course'])){
 {
     $uni_name = $_POST['uni_name'];
     $uni_adress = $_POST['uni_adress'];
+    $r_marks_matric = $_POST['r_marks_matric'];
+    $r_marks_intermediate = $_POST['r_marks_intermediate'];
+    $r_marks_entry = $_POST['r_marks_entry'];
    
-$sql = "INSERT INTO universities (uni_name,uni_adress) VALUES
-            ('$uni_name','$uni_adress')";
+$sql = "INSERT INTO universities (uni_name,uni_adress,r_marks_matric,r_marks_intermediate,r_marks_entry) VALUES
+            ('$uni_name','$uni_adress','$r_marks_matric','$r_marks_intermediate','$r_marks_entry')";
 if(mysqli_query($conn, $sql)){
     echo "Records added successfully.";
     header("location:Add_uni.php");
@@ -104,7 +107,12 @@ if(mysqli_query($conn, $sql)){
     $id = $_POST['id'];
     $uni_name = $_POST['uni_name'];
     $uni_adress = $_POST['uni_adress'];
-    $sql = "UPDATE universities SET uni_name='$uni_name' , uni_adress='$uni_adress' where id='$id'";
+    $r_marks_matric = $_POST['r_marks_matric'];
+    $r_marks_intermediate = $_POST['r_marks_intermediate'];
+    $r_marks_entry = $_POST['r_marks_entry'];
+    $sql = "UPDATE universities SET uni_name='$uni_name' , uni_adress='$uni_adress' ,
+    r_marks_matric='$r_marks_matric',r_marks_intermediate='$r_marks_intermediate',
+    r_marks_entry='$r_marks_entry' where id='$id'";
     if (mysqli_query($conn, $sql)) {
         echo "Record updated successfully";
         header("location:Add_uni.php");

@@ -30,26 +30,28 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     }
    ?>
    <div class="container">
-   <form action="">
+   <h1 class="text-center">Calculate Your Merit</h1>
+   <hr>
+   <form  method="post">
    
    <div class="row">
    
         <div class="col-md-4">
         <label>MATRIC</label>
-            <input type="number" name="metric" class="form-control">
+            <input type="number" name="r_marks_matric" class="form-control">
         </div>
         <div class="col-md-4">
         <label >INTERMEDIATE</label>
-            <input type="number" name="metric" class="form-control">
+            <input type="number" name="r_marks_intermediate" class="form-control">
         </div>
         <div class="col-md-4">
         <label for="">Entry Test</label>
         <div class="row">
         <div class="col-md-6">
-        <input type="number" name="metric" class="form-control">
+        <input type="number" name="r_marks_entry" class="form-control">
         </div>
         <div class="col-md-6">
-        <input type="button" name="search" class="btn btn-success" value="Search">
+        <input type="button" name="search_list" id="search_list" class="btn btn-success" value="Search">
         </div>
         </div>
            
@@ -60,11 +62,12 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
    </form>
    
    </div>
+ 
         <!--================Admissiion requirement check Section =================-->
 		<section class="courses_area p_120">
         	<div class="container">
         		<div class="main_title">
-        			<h2>Universities Admision Requirement</h2>
+        			<h2>You are eligible for these universities</h2>
         			<hr>
         		</div>
         		<div class="row courses_inner">
@@ -94,7 +97,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                                                 if ($result->num_rows > 0) {
                                                 // output data of each row
                                                 while($row = $result->fetch_assoc()) {
-
+                                                    if($merit < $row['c_a_m']){
                                               ?>
 										<tr class="gradeU">
 											<td><?php echo $row["uni_name"];?></td>
@@ -111,7 +114,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                                             </td>
 										</tr>
                                         <?php
-                                             ;
+                                             ;}
                                                 }
                                                 } else {
                                                 echo "0 results";
@@ -142,6 +145,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 		</div>
         	</div>
         </section>
+        
         <!--================ start footer Area  =================-->	
       <?php include "partials/_footer.php"; ?>
       

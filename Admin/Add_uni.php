@@ -30,6 +30,9 @@ include "partials/_mainnav.php";
 										<tr>
 											<th>University name</th>
 											<th>University Adress</th>
+											<th>required marks Matric</th>
+											<th>required marks Intermediate</th>
+											<th>required marks Entry test</th>
 											
 											<th>Action</th>
 										</tr>
@@ -58,6 +61,9 @@ include "partials/_mainnav.php";
                                         <tr>
 										<td><?php echo $row['uni_name'] ;?></td>
 										<td><?php echo $row['uni_adress'] ;?></td>
+										<td><?php echo $row['r_marks_matric'] ;?>/1100</td>
+										<td><?php echo $row['r_marks_intermediate'] ;?>/1100</td>
+										<td><?php echo $row['r_marks_entry'] ;?>/100</td>
                                             
                                           
 
@@ -69,9 +75,13 @@ include "partials/_mainnav.php";
                                     </tbody>
 									<tfoot>
 										<tr>
-                                        <th>University name</th>
-										<th>University Adress</th>	
-                                            <th>Action</th>
+										<th>University name</th>
+											<th>University Adress</th>
+											<th>required marks Matric</th>
+											<th>required marks Intermediate</th>
+											<th>required marks Entry test</th>
+											
+											<th>Action</th>
 										</tr>
 									</tfoot>
 								</table>

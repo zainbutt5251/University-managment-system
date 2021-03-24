@@ -42,7 +42,7 @@
                                     
                                     
                                     </b> </a></li>
-                                <li><a href="Add_uni.php"><i class="menu-icon icon-tasks"></i>Add University </a></li>
+                                <li><a href="Add_uni.php"><i class="menu-icon icon-tasks"></i>Add University with Aggregate</a></li>
                             </ul>
                             <!--/.widget-nav-->
                         </div>
