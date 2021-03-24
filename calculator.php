@@ -35,6 +35,8 @@
     </div>
     <button type="submit" class="btn btn-primary" id="submit">Submit</button>
   <!-- </form> -->
+
+  <input type="text" class="form-control" id="total" placeholder="" name="" disabled>
 </div>
 
 
@@ -42,30 +44,19 @@
 <script>
 $("#submit").on("click",function()
 {
-// alert("helo");
-// console.log($("#mmark").val());
 var data = 
 {
 matric : $("#mmark").val(),
 fsc : $("#fmark").val(),
 test : $("#tmark").val()
 };
-console.log(data);
-// $.ajax({
-// url : "Admin/agregate.php",
-// type: "POST",
-// data : data
-// success: function(dataResult){
-
-// }
-// });
 $.ajax({
 				url: "Admin/agregate.php",
 				type: "POST",
 				data: data,
 				success: function(res){
-			
 					console.log(res)
+          $("#total").val(res);
 				}
 			});
 });
