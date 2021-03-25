@@ -64,7 +64,8 @@ include "partials/_mainnav.php";
                                                 if ($result->num_rows > 0) {
                                                 // output data of each row
                                                 while($row = $result->fetch_assoc()) {
-                                              ?>
+                                            
+											?>
                                         <tr>
                                             <td><?php echo $row['uni_name'] ;?></td>
                                             <td><?php echo $row['course_name'] ;?></td>
@@ -76,6 +77,7 @@ include "partials/_mainnav.php";
                                             <td><?php echo $row['fees_6']; ?></td>
                                             <td><?php echo $row['fees_7']; ?></td>
                                             <td><?php echo $row['fees_8']; ?></td>
+											
                                             <td><?php echo $row['c_a_m']."%"; ?></td>
                                             <td><?php echo $row['year_last']; ?></td>
                                             <td><?php echo $row['admission_dead_line']; ?></td>

@@ -51,7 +51,7 @@ fsc : $("#fmark").val(),
 test : $("#tmark").val()
 };
 $.ajax({
-				url: "Admin/agregate.php",
+				url: "partials/agregate.php",
 				type: "POST",
 				data: data,
 				success: function(res){

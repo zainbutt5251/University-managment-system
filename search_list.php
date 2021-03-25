@@ -32,35 +32,36 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
    <div class="container">
    <h1 class="text-center">Calculate Your Merit</h1>
    <hr>
-   <form  method="post">
    
+   <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
    <div class="row">
-   
         <div class="col-md-4">
         <label>MATRIC</label>
-            <input type="number" name="r_marks_matric" class="form-control">
+            <input type="number" name="r_marks_matric" id="r_marks_matric" class="form-control">
         </div>
         <div class="col-md-4">
         <label >INTERMEDIATE</label>
-            <input type="number" name="r_marks_intermediate" class="form-control">
+            <input type="number" name="r_marks_intermediate" id="r_marks_intermediate" class="form-control">
         </div>
         <div class="col-md-4">
         <label for="">Entry Test</label>
         <div class="row">
         <div class="col-md-6">
-        <input type="number" name="r_marks_entry" class="form-control">
+        <input type="number" name="r_marks_entry" id="r_marks_entry" class="form-control">
         </div>
         <div class="col-md-6">
-        <input type="button" name="search_list" id="search_list" class="btn btn-success" value="Search">
+       
+         <button type="submit" class="btn btn-primary" id="search_list">Submit</button>
+       
         </div>
         </div>
-           
+           </form>
            
         </div>
    
    </div>
-   </form>
    
+
    </div>
  
         <!--================Admissiion requirement check Section =================-->
@@ -88,16 +89,27 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 									<tbody>
 									
 									<?php
-                                               
+                                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                        // collect value of input field
+                                        $r_marks_matric = $_POST["r_marks_matric"];
+                                        $r_marks_intermediate = $_POST["r_marks_intermediate"];
+                                        $r_marks_entry = $_POST["r_marks_entry"];
+                                        $r_marks_matric = $r_marks_matric *35 /1100; 
+                                        $r_marks_intermediate = $r_marks_intermediate *35 /1100;
+                                        $r_marks_entry = $r_marks_entry *30 /100; 
+                                        $agregate = $r_marks_matric + $r_marks_intermediate + $r_marks_entry;
+                                        print_r(intval($agregate));
+                                        die(); 
 
                                                 $sql = "SELECT universities.*, u_course_fees.* FROM universities
-												INNER JOIN u_course_fees ON universities.id=u_course_fees.id";
+												INNER JOIN u_course_fees ON universities.uni_name=u_course_fees.c_a_m";
                                                 $result = $conn->query($sql);
 
-                                                if ($result->num_rows > 0) {
+                                                if ($result->num_rows) {
                                                 // output data of each row
                                                 while($row = $result->fetch_assoc()) {
-                                                    if($merit < $row['c_a_m']){
+                                                   echo print_r($row);
+                                                   die(); 
                                               ?>
 										<tr class="gradeU">
 											<td><?php echo $row["uni_name"];?></td>
@@ -114,12 +126,12 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                                             </td>
 										</tr>
                                         <?php
-                                             ;}
+                                             ;
                                                 }
                                                 } else {
                                                 echo "0 results";
                                                 }
-                                        
+                                            }
                                                 ?>
                                     
 									</tbody>
@@ -146,6 +158,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         	</div>
         </section>
         
+
         <!--================ start footer Area  =================-->	
       <?php include "partials/_footer.php"; ?>
       
