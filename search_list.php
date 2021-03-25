@@ -98,23 +98,23 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                                         $r_marks_intermediate = $r_marks_intermediate *35 /1100;
                                         $r_marks_entry = $r_marks_entry *30 /100; 
                                         $agregate = $r_marks_matric + $r_marks_intermediate + $r_marks_entry;
-                                        print_r(intval($agregate));
-                                        die(); 
+                                          
+                                                   
 
-                                                $sql = "SELECT universities.*, u_course_fees.* FROM universities
-												INNER JOIN u_course_fees ON universities.uni_name=u_course_fees.c_a_m";
+                                                // $sql = "SELECT universities.*, u_course_fees.* FROM universities
+												// INNER JOIN u_course_fees ON universities.uni_name=u_course_fees.c_a_m";
+                                                 $sql="select * from u_course_fees where c_a_m <'$agregate'";
                                                 $result = $conn->query($sql);
 
                                                 if ($result->num_rows) {
                                                 // output data of each row
                                                 while($row = $result->fetch_assoc()) {
-                                                   echo print_r($row);
-                                                   die(); 
+                                                   
                                               ?>
 										<tr class="gradeU">
 											<td><?php echo $row["uni_name"];?></td>
 											<td><?php echo $row["course_name"];?></td>
-											<td><?php echo $row["c_a_m"]."%";?></td>
+											<td><?php echo $row["c_a_m"];"%";?></td>
                                             <td><?php echo $row["year_last"]?></td>
                                             <td><?php echo $row["admission_dead_line"]?></td>
                                           
