@@ -18,7 +18,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Learn it</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
-        <script src="bootstrap/js/bootstrap.min.js" ></script>
+        
 
         <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
         <link type="text/css" href="css/theme.css" rel="stylesheet">

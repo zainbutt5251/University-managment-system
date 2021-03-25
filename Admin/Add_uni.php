@@ -99,7 +99,7 @@ include "partials/_mainnav.php";
 
 
 	<script src="./scripts/jquery-1.9.1.min.js"></script>
-	<script src="./scripts/jquery-ui-1.10.1.custom.min.js"></script>
+
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
 	<script src="./scripts/datatables/jquery.dataTables.js"></script>
 	<script>
